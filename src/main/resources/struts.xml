@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+    <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD  
+     Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="default" extends="struts-default" namespace="/">
+
+		<action name="login">
+			<result>login/login.jsp</result>
+		</action>
+
+		<action name="addtask">
+			<result>body/addtask.jsp</result>
+		</action>
+
+		<action name="registry">
+			<result>registry/registry.jsp</result>
+		</action>
+
+		<action name="newtask">
+			<result>body/addtask.jsp</result>
+		</action>
+
+		<action name="showtasks" class="pl.studia.todolist.showtasks.ShowTasks">
+			<result name="success">body/showtasks.jsp</result>
+		</action>
+
+		<action name="addtaskprocess" class="pl.studia.todolist.addtask.AddTask">
+			<result name="success">body/addtasksuccess.jsp</result>
+			<result name="error">body/addtaskerror.jsp</result>
+		</action>
+
+		<action name="loginprocess" class="pl.studia.todolist.login.Login">
+			<result name="success">login/loginsuccess.jsp</result>
+			<result name="error">login/loginerror.jsp</result>
+		</action>
+
+		<action name="registryprocess" class="pl.studia.todolist.registry.Registry">
+			<result name="success">registry/registrysuccess.jsp</result>
+			<result name="error">registry/registryerror.jsp</result>
+		</action>
+
+		<action name="logout" class="pl.studia.todolist.login.Login"
+			method="logout">
+			<result name="success">login/logoutsuccess.jsp</result>
+		</action>
+
+		<action name="profile" class="pl.studia.todolist.profile.Profile">
+			<result name="success">profilesuccess.jsp</result>
+			<result name="error">profileerror.jsp</result>
+		</action>
+
+	</package>
+</struts>      

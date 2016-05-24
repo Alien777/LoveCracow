@@ -1,8 +1,7 @@
 package pl.studia.todolist.model;
 
 import java.io.Serializable;
-import java.sql.Date;
-import java.sql.Time;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "Task")
@@ -20,24 +21,23 @@ public class Task implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 3211L;
-	public Task(String title, String description, Date data, Time time) {
+
+	public Task(String title, String description, Date date) {
 		super();
 		this.title = title;
 		this.description = description;
-		this.data = data;
-		this.time = time;
+		this.date = date;
 	}
 
-	public Task(int id, String title, String description, Date data, Time time) {
-	
+	public Task(int id, String title, String description, Date date) {
+
 		this.id = id;
-		//this(title, description, data, time);
+		// this(title, description, data, time);
 
 	}
 
 	public Task() {
 	}
-
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -47,10 +47,10 @@ public class Task implements Serializable {
 	private String title;
 	@Column(name = "description")
 	private String description;
-	@Column(name = "data")
-	private Date data;
-	@Column(name = "time")
-	private Time time;
+
+	@Column(name = "date", columnDefinition = "DATETIME")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date date;
 
 	@ManyToOne
 	@JoinColumn(name = "user_id")
@@ -80,20 +80,12 @@ public class Task implements Serializable {
 		this.description = description;
 	}
 
-	public Date getData() {
-		return data;
+	public Date getDate() {
+		return date;
 	}
 
-	public void setData(Date data) {
-		this.data = data;
-	}
-
-	public Time getTime() {
-		return time;
-	}
-
-	public void setTime(Time time) {
-		this.time = time;
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
 	public User getUser() {

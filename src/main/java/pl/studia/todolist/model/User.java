@@ -16,14 +16,12 @@ import javax.persistence.UniqueConstraint;
 
 @Entity
 @Table(name = "User", uniqueConstraints = { @UniqueConstraint(columnNames = "id") })
-public class User implements Serializable{
+public class User implements Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 3423L;
-	public User() {	}
-	public User(String mail, String password) {	
+	public User() {
+	}
+
+	public User(String mail, String password) {
 		this("logowanie", mail, password);
 	}
 
@@ -39,7 +37,7 @@ public class User implements Serializable{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
-	@Column(name = "mail", unique = true)
+	@Column(name = "mail" , unique = true)
 	private String mail;
 
 	@Column(name = "name")
@@ -91,36 +89,5 @@ public class User implements Serializable{
 	public void setId(int id) {
 		this.id = id;
 	}
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((mail == null) ? 0 : mail.hashCode());
-		result = prime * result + ((password == null) ? 0 : password.hashCode());
-		return result;
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		User other = (User) obj;
-		if (mail == null) {
-			if (other.mail != null)
-				return false;
-		} else if (!mail.equals(other.mail))
-			return false;
-		if (password == null) {
-			if (other.password != null)
-				return false;
-		} else if (!password.equals(other.password))
-			return false;
-		return true;
-	}
-	
-	
 
 }
