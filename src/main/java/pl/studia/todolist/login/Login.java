@@ -34,6 +34,7 @@ public class Login implements SessionAware {
 
 			if (new LoginDao().validate(userMail, userPass)) {
 				sessionmap.put("login", userMail);
+				sessionmap.put("id", userMail);
 				return "success";
 			} else {
 				return "error";

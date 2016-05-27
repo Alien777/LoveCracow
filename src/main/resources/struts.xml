@@ -10,45 +10,42 @@
 		</action>
 
 		<action name="addtask">
-			<result>body/addtask.jsp</result>
+			<result>addtask/addtask.jsp</result>
 		</action>
 
 		<action name="registry">
 			<result>registry/registry.jsp</result>
 		</action>
 
-		<action name="newtask">
-			<result>body/addtask.jsp</result>
-		</action>
 
 		<action name="showtasks" class="pl.studia.todolist.showtasks.ShowTasks">
-			<result name="success">body/showtasks.jsp</result>
+			<result name="success">showtasks/success.jsp</result>
+			<result name="error">showtasks/error.jsp</result>
 		</action>
 
 		<action name="addtaskprocess" class="pl.studia.todolist.addtask.AddTask">
-			<result name="success">body/addtasksuccess.jsp</result>
-			<result name="error">body/addtaskerror.jsp</result>
+			<result name="success">addtask/success.jsp</result>
+			<result name="error">addtask/error.jsp</result>
 		</action>
 
 		<action name="loginprocess" class="pl.studia.todolist.login.Login">
-			<result name="success">login/loginsuccess.jsp</result>
-			<result name="error">login/loginerror.jsp</result>
+			<result name="success">login/success.jsp</result>
+			<result name="error">login/error.jsp</result>
+		</action>
+
+		<action name="deletetask" class="pl.studia.todolist.deletetask.DeleteTask">
+			<result name="success">deletetask/success.jsp</result>
+			<result name="error">deletetask/error.jsp</result>
 		</action>
 
 		<action name="registryprocess" class="pl.studia.todolist.registry.Registry">
-			<result name="success">registry/registrysuccess.jsp</result>
-			<result name="error">registry/registryerror.jsp</result>
+			<result name="success">registry/success.jsp</result>
+			<result name="error">registry/error.jsp</result>
 		</action>
 
 		<action name="logout" class="pl.studia.todolist.login.Login"
 			method="logout">
-			<result name="success">login/logoutsuccess.jsp</result>
+			<result name="success">logout/success.jsp</result>
 		</action>
-
-		<action name="profile" class="pl.studia.todolist.profile.Profile">
-			<result name="success">profilesuccess.jsp</result>
-			<result name="error">profileerror.jsp</result>
-		</action>
-
 	</package>
 </struts>      

@@ -1,14 +1,11 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
-
-
-
 <html>
 <head>
 <title>Date Picker</title>
 
 <sj:head />
-<jsp:include page="menu.jsp"></jsp:include>
+<jsp:include page="../body/menu.jsp"></jsp:include>
 </head>
 <hr />
 
