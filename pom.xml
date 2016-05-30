@@ -191,6 +191,11 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.16</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.2</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -206,6 +211,11 @@
 			<groupId>com.zenjava</groupId>
 			<artifactId>javafx-maven-plugin</artifactId>
 			<version>8.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
@@ -242,6 +252,12 @@
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-core</artifactId>
 			<version>2.3.20.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.jgeppert.struts2.bootstrap</groupId>
+			<artifactId>struts2-bootstrap-plugin</artifactId>
+			<version>2.5.0</version>
 		</dependency>
 
 

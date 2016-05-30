@@ -6,8 +6,14 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 	crossorigin="anonymous"></script>
-
-<div class="alert alert-danger">
-	<p>Niepoprawne logowanie, sprawdz dane!</p>
-</div>
-<jsp:include page="login.jsp"></jsp:include>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">ToDoList</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="login">Logowanie</a></li>
+			<li><a href="registry">Rejestrowanie</a></li>
+		</ul>
+	</div>
+</nav>

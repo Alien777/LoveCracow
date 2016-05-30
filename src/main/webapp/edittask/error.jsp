@@ -8,7 +8,6 @@
 	crossorigin="anonymous"></script>
 
 <div class="alert alert-danger">
-	<p>Nie mozna dodac zadania!</p>
+	<p>Zadanie nie zostalo zmienione!</p>
 </div>
-<jsp:include page="addtask.jsp"></jsp:include>
- 
+<jsp:include page="edittask.jsp"></jsp:include>

@@ -16,8 +16,17 @@
 		<action name="registry">
 			<result>registry/registry.jsp</result>
 		</action>
-
-
+		
+		<action name="edittask" class="pl.studia.todolist.edittask.EditTask">
+			<result name="success">edittask/edittask.jsp</result>
+			<result name="error">edittask/error.jsp</result>
+		</action>
+		
+		<action name="edittaskprocess" class="pl.studia.todolist.edittask.SaveTask">
+			<result name="success">edittask/success.jsp</result>
+			<result name="error">edittask/error.jsp</result>
+		</action>
+ 
 		<action name="showtasks" class="pl.studia.todolist.showtasks.ShowTasks">
 			<result name="success">showtasks/success.jsp</result>
 			<result name="error">showtasks/error.jsp</result>
